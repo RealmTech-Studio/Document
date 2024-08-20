@@ -1,4 +1,4 @@
-name: Update Submodules
+name: Sync Docs
 
 on: 
   workflow_dispatch:
@@ -20,11 +20,11 @@ jobs:
       with:
         submodules: true
         token: ${{ secrets.BOT }}
-    - name: Sync submodules
+    - name: Sync Docs
       run: git submodule sync
-    - name: Update submodules
+    - name: Update Docs
       run: git submodule update --init --recursive --remote
-    - name: Ensure submodule branch
+    - name: Ensure Docs branch
       run: |
         git submodule foreach 'git checkout main && git pull origin main'
     - name: Commit changes
