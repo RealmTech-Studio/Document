@@ -10,5 +10,8 @@
     "@vuepress/bundler-vite": "^2.0.0-rc.15",
     "@vuepress/theme-default": "^2.0.0-rc.41",
     "vuepress": "^2.0.0-rc.15"
+  },
+  "dependencies": {
+    "vuepress-theme-hope": "^2.0.0-rc.52"
   }
 }
