@@ -35,9 +35,9 @@ jobs:
 
       # 运行构建脚本
       - name: Make As Dependencies
-        run: yarn add -D vuepress
+        run: yarn add -D vuepress --ignore-engines
       - name: Build VuePress site
-        run: yarn docs:build
+        run: yarn docs:build --ignore-engines
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
