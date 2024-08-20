@@ -1,7 +1,6 @@
 name: Sync Docs
 
 on: 
-  workflow_dispatch:
   repository_dispatch:
     types: [trigger-from-sub-repo]
   push:
