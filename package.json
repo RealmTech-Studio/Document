@@ -14,4 +14,7 @@
   "dependencies": {
     "vuepress-theme-hope": "^2.0.0-rc.52"
   }
+  "scripts": {
+    "docs:build": "vuepress build docs"
+  }
 }
