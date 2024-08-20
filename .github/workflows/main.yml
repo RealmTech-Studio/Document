@@ -2,6 +2,8 @@ name: Update Submodules
 
 on: 
   workflow_dispatch:
+  repository_dispatch:
+    types: [trigger-from-sub-repo]
   push:
     branches: [ "main" ]
   pull_request:
