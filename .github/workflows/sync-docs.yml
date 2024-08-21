@@ -23,6 +23,11 @@ jobs:
       run: git submodule sync --recursive
     - name: Fetch all submodules
       run: git submodule foreach 'git fetch --all'
+    - name: Reset submodule to remote
+      run: |
+        cd docs
+        git reset --hard origin/main
+        cd ..
     - name: Update Docs
       run: git submodule update --init --recursive --remote
     - name: Ensure Docs branch
