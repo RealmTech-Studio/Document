@@ -17,15 +17,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       with:
-        submodules: true
+        submodules: recursive
         token: ${{ secrets.BOT }}
     - name: Sync Docs
-      run: git submodule sync
+      run: git submodule sync --recursive
     - name: Update Docs
       run: git submodule update --init --recursive --remote
     - name: Ensure Docs branch
       run: |
-        git submodule foreach 'git checkout main && git pull origin main'
+        git submodule foreach 'git fetch --all && git checkout main && git pull origin main'
     - name: Commit changes
       run: |
         git config --global user.name 'github-actions'
